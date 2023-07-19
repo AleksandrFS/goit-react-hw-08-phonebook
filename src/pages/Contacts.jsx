@@ -1,5 +1,14 @@
+import { ContactForm } from "components/ContactForm/ContactForm";
+import { ContactList } from "components/ContactList/ContactList";
+import { Filter } from "components/Filter/Filter";
+
 export const Contacts = () => {
     return (
-        <p>Contacts of logged in user</p>
-    )
+      <>
+        <h2>Phonebook</h2>
+        <ContactForm />
+        <Filter />
+        <ContactList />
+      </>
+    );
 }

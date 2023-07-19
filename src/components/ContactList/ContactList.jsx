@@ -2,7 +2,10 @@ import css from './ContactList.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { filterForContacts } from 'redux/contacts/filterContactsSlice';
-import { getContactsThunk, deleteContactsThunk } from 'redux/thunk';
+import {
+  getContactsThunk,
+  deleteContactsThunk,
+} from 'redux/contacts/contactsOperations';
 import { useEffect } from 'react';
 import { Spinner } from 'components/Loader/Loader';
 
@@ -25,11 +28,11 @@ export const ContactList = () => {
       {error && <p>error</p>}
       {filteredContacts && (
         <ul className={css.list}>
-          {filteredContacts.map(({ name, phone, id }) => (
+          {filteredContacts.map(({ name, number, id }) => (
             <li key={id} className={css.contactList}>
               <div className={css.contact}>
                 <p>
-                  {name}: {phone}
+                  {name}: {number}
                 </p>
                 <button
                   type="button"

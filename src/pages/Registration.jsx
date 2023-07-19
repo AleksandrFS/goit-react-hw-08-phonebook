@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
+// import { useAuth } from 'redux/hooks/useAuth';
 
 export const Registration = () => {
+  
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -34,7 +36,6 @@ export const Registration = () => {
       return
     }
     const form = e.currentTarget;
-    console.log(name)
     dispatch(register({ name, email, password }));
      setName('');
      setEmail('');
@@ -47,11 +48,21 @@ export const Registration = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Name
-          <input type="text" name="name" onChange={handleChange} />
+          <input
+            type="text"
+            name="name"
+            onChange={handleChange}
+            autoComplete="off"
+          />
         </label>
         <label>
           Email
-          <input type="email" name="email" onChange={handleChange} />
+          <input
+            type="email"
+            name="email"
+            onChange={handleChange}
+            autoComplete="off"
+          />
         </label>
         <label>
           Password
