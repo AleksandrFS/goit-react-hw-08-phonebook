@@ -1,13 +1,24 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-08-phonebook/static/css/main.4892681d.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.51165667.js",
+    "main.css": "/goit-react-hw-08-phonebook/static/css/main.f8e393d9.css",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.6bd67de1.js",
+    "static/js/415.91d264a6.chunk.js": "/goit-react-hw-08-phonebook/static/js/415.91d264a6.chunk.js",
+    "static/js/451.05a33d01.chunk.js": "/goit-react-hw-08-phonebook/static/js/451.05a33d01.chunk.js",
+    "static/js/38.93bdda88.chunk.js": "/goit-react-hw-08-phonebook/static/js/38.93bdda88.chunk.js",
+    "static/css/517.3b2b1932.chunk.css": "/goit-react-hw-08-phonebook/static/css/517.3b2b1932.chunk.css",
+    "static/js/517.c9f3169d.chunk.js": "/goit-react-hw-08-phonebook/static/js/517.c9f3169d.chunk.js",
+    "static/media/black-concrete-wall-min.jpg": "/goit-react-hw-08-phonebook/static/media/black-concrete-wall-min.efb3acd191bbc010b5c9.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
-    "main.4892681d.css.map": "/goit-react-hw-08-phonebook/static/css/main.4892681d.css.map",
-    "main.51165667.js.map": "/goit-react-hw-08-phonebook/static/js/main.51165667.js.map"
+    "main.f8e393d9.css.map": "/goit-react-hw-08-phonebook/static/css/main.f8e393d9.css.map",
+    "main.6bd67de1.js.map": "/goit-react-hw-08-phonebook/static/js/main.6bd67de1.js.map",
+    "415.91d264a6.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/415.91d264a6.chunk.js.map",
+    "451.05a33d01.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/451.05a33d01.chunk.js.map",
+    "38.93bdda88.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/38.93bdda88.chunk.js.map",
+    "517.3b2b1932.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/517.3b2b1932.chunk.css.map",
+    "517.c9f3169d.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/517.c9f3169d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4892681d.css",
-    "static/js/main.51165667.js"
+    "static/css/main.f8e393d9.css",
+    "static/js/main.6bd67de1.js"
   ]
 }

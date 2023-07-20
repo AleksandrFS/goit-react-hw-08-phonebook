@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[415],{5415:function(e,o,t){t.r(o);var n=t(3329);o.default=function(){return(0,n.jsxs)("div",{children:[(0,n.jsx)("h1",{children:"Phonebook App"}),(0,n.jsx)("p",{children:"This app was created for educational purposes only. It allows you to create and store contacts and store"})]})}}}]);
+//# sourceMappingURL=415.91d264a6.chunk.js.map
