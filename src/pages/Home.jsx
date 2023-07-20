@@ -1,7 +1,13 @@
-export const Home = () => {
+ const Home = () => {
     return (
-        <div>
-            <p>App's description</p>
-        </div>
-    )
+      <div>
+        <h1>Phonebook App</h1>
+        <p>
+          This app was created for educational purposes only. It allows you to create and store contacts
+          and store
+        </p>
+      </div>
+    );
 }
+
+export default Home

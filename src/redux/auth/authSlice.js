@@ -40,12 +40,16 @@ export const authSlice = createSlice({
       .addCase(logOut.rejected, (state, action) => {
         state.error = action.payload;
       })
-      .addCase(refreshUser.pending, (state, action) => state)
+      .addCase(refreshUser.pending, (state) => {
+        state.isRefreshing = true;
+      })
       .addCase(refreshUser.fulfilled, (state, action) => {
         state.user = action.payload;
         state.isLoggedIn = true;
+        state.isRefreshing = false;
       })
       .addCase(refreshUser.rejected, (state, action) => {
         state.error = action.payload;
+        state.isRefreshing = false;
       }),
 });

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
-// import { useAuth } from 'redux/hooks/useAuth';
 
-export const Registration = () => {
+
+const Registration = () => {
   
   const dispatch = useDispatch();
 
@@ -73,3 +73,5 @@ export const Registration = () => {
     </>
   );
 };
+
+export default Registration;

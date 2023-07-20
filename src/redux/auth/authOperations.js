@@ -45,10 +45,9 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
   const { token } = thunkAPI.getState().auth;
   if (!token) return thunkAPI.rejectWithValue('Valid token does not exist');
-  setAuthHeader(token);
   try {
+    setAuthHeader(token);
     const res = await axios.get('/users/current');
-    console.log(res.data)
     return res.data
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);

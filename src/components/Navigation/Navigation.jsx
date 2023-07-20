@@ -1,13 +1,12 @@
-
-import { Link } from "react-router-dom";
-import { useAuth } from "redux/hooks/useAuth";
+import { Link } from 'react-router-dom';
+import { useAuth } from 'hooks/useAuth';
 
 export const Navigation = () => {
-    const { isLoggedIn } = useAuth();
-    return (
-      <>
-        <Link to="/">Home</Link>
-        {isLoggedIn && <Link to="/contacts">Contacts</Link>}
-      </>
-    );
-}
+  const { isLoggedIn } = useAuth();
+  return (
+    <>
+      <Link to="/">Home</Link>
+      {isLoggedIn && <Link to="/contacts">Contacts</Link>}
+    </>
+  );
+};

@@ -1,18 +1,24 @@
-import { AppBar } from "components/AppBar/AppBar";
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 
-export const SharedLayout = () => {
+import { AppTool } from 'components/AppTool/AppTool';
+import { Spinner } from 'components/Loader/Loader';
+import { Suspense } from 'react';
+
+import { MainBox } from './SharedLayot.styled';
+
+const SharedLayout = () => {
   return (
-    <div>
+    <MainBox>
       <nav>
-        <AppBar/>
-        {/* <Link to="/">Home</Link>
-        <Link to="/register"> Register</Link>
-        <Link to="/login">Login</Link> */}
+      <AppTool />
       </nav>
       <main>
+      <Suspense fallback={<Spinner />}>
         <Outlet />
+      </Suspense>
       </main>
-    </div>
+    </MainBox>
   );
-}
+};
+
+export default SharedLayout;
