@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
-export const SpinnerLoad = styled('div')`
+export const Loader = styled('div')`
   position: fixed;
   top: 0;
   bottom: 0;

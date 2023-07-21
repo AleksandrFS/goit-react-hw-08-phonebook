@@ -1,9 +1,9 @@
 import { BallTriangle } from 'react-loader-spinner';
-import { SpinnerLoad } from './Loader.styled';
+import { Loader } from './loader.styled';
 
 export const Spinner = () => {
   return (
-    <SpinnerLoad>
+    <Loader>
       <BallTriangle
         height={50}
         width={50}
@@ -13,6 +13,6 @@ export const Spinner = () => {
         wrapperStyle=""
         visible={true}
       />
-    </SpinnerLoad>
+    </Loader>
   );
 };
