@@ -1,8 +1,8 @@
-import { AuthNav } from '../AuthNav/AuthNav';
-import { Navigation } from '../Navigation/Navigation';
+import { AuthNav } from 'components/AuthNav/AuthNav'; 
+import { Navigation } from 'components/Navigation/Navigation'; 
 import { useAuth } from 'hooks/useAuth';
-// import { UserMenu } from 'components/UserMenu/UserMenu';
-import { UserMenu } from '../UserMenu/UserMenu';
+import { UserMenu } from 'components/UserMenu/userMenu';
+
 
 import { AppToolStyled, AuthPartStyled } from './AppTool.styled';
 
