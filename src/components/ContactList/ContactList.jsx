@@ -1,13 +1,30 @@
-import css from './ContactList.module.css';
-
+import { AiFillDelete } from 'react-icons/ai';
+import { IconContext } from 'react-icons';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Spinner } from 'components/Loader/Loader';
 import { filterForContacts } from 'redux/contacts/filterContactsSlice';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import {
   getContactsThunk,
   deleteContactsThunk,
 } from 'redux/contacts/contactsOperations';
-import { useEffect } from 'react';
-import { Spinner } from 'components/Loader/Loader';
+
+import {
+  ContactFrame,
+  List,
+  ContactWrap,
+  DelBtn,
+  ContactCard,
+  ContactValues,
+} from './ContactList.styled';
+
+Notify.init({
+  width: '300px',
+  position: 'right-top',
+  closeButton: false,
+  timeout: 2500,
+});
 
 export const ContactList = () => {
   const { contacts, error, isLoading } = useSelector(state => state.contacts);
@@ -25,26 +42,29 @@ export const ContactList = () => {
   return (
     <>
       {isLoading && <Spinner />}
-      {error && <p>error</p>}
+      {error && Notify.failure(error)}
       {filteredContacts && (
-        <ul className={css.list}>
+        <ContactWrap>
           {filteredContacts.map(({ name, number, id }) => (
-            <li key={id} className={css.contactList}>
-              <div className={css.contact}>
-                <p>
-                  {name}: {number}
-                </p>
-                <button
+            <List key={id}>
+              <ContactFrame>
+                <ContactCard>
+                  <ContactValues>{name} :</ContactValues>
+                  <ContactValues>{number}</ContactValues>
+                </ContactCard>
+
+                <DelBtn
                   type="button"
                   onClick={() => dispatch(deleteContactsThunk(id))}
-                  className={css.btnDelete}
                 >
-                  Delete
-                </button>
-              </div>
-            </li>
+                  <IconContext.Provider value={{ size: '25' }}>
+                    <AiFillDelete />
+                  </IconContext.Provider>
+                </DelBtn>
+              </ContactFrame>
+            </List>
           ))}
-        </ul>
+        </ContactWrap>
       )}
     </>
   );

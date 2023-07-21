@@ -1,5 +1,3 @@
-
-
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import SharedLayout from './SharedLayout/SharedLayout';
@@ -11,12 +9,10 @@ import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { Spinner } from './Loader/Loader';
 
-const Home = lazy(() => import("../pages/Home"));
-const Registration = lazy(() => import("../pages/Registration"));
-const Login = lazy(() => import("../pages/Login"));
-const Contacts = lazy(() => import("../pages/Contacts"));
-
-
+const Home = lazy(() => import('../pages/Home/Home'));
+const Registration = lazy(() => import('../pages/Registration/Registration'));
+const Login = lazy(() => import('../pages/Login/Login'));
+const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -28,7 +24,9 @@ export const App = () => {
 
   return (
     <>
-      {isRefreshing ? <Spinner/> : (
+      {isRefreshing ? (
+        <Spinner />
+      ) : (
         <div>
           <Routes>
             <Route path="/" element={<SharedLayout />}>
@@ -44,7 +42,7 @@ export const App = () => {
               />
               <Route
                 path="login"
-                element={ 
+                element={
                   <RestrictedRoute component={Login} redirectTo="/contacts" />
                 }
               />

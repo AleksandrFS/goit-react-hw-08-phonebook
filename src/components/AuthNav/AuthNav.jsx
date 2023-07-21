@@ -1,5 +1,3 @@
-
-// import { NavLink } from "react-router-dom";
 import { StyledNavLink } from "components/AppTool/NavLink.styled";
 
 export const AuthNav = () => {

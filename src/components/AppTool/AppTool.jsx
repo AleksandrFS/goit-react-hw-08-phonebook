@@ -1,7 +1,7 @@
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { Navigation } from 'components/Navigation/Navigation';
 import { useAuth } from 'hooks/useAuth';
-import { UserMenu } from 'components/UserMenu/userMenu';
+import { UserMenu } from 'components/UserMenu/UserMenu';
 
 import { AppToolStyled, AuthPartStyled } from './AppTool.styled';
 
@@ -10,9 +10,7 @@ export const AppTool = () => {
   return (
     <AppToolStyled>
       <Navigation />
-      <AuthPartStyled>
-        {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      </AuthPartStyled>
+      <AuthPartStyled>{isLoggedIn ? <UserMenu /> : <AuthNav />}</AuthPartStyled>
     </AppToolStyled>
   );
 };

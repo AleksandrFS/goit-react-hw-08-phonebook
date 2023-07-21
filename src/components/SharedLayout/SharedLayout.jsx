@@ -1,8 +1,7 @@
 import { Outlet } from 'react-router-dom';
-
+import { Suspense } from 'react';
 import { AppTool } from 'components/AppTool/AppTool';
 import { Spinner } from 'components/Loader/Loader';
-import { Suspense } from 'react';
 
 import { MainBox } from './SharedLayot.styled';
 
